@@ -17,7 +17,7 @@ public class CloudantClientMgr {
 	private static CloudantClient cloudant = null;
 	private static Database db = null;
 
-	private static String databaseName = "login";
+	//private static String databaseName = "login";
 
 	private static String user = "42985fbc-d366-4541-aa53-8bf12f82978c-bluemix";
 	private static String password = "eee3a79b2ac94b4d3cdf299a8f975cf923620a6618cd0891e8ac9061408cfd85";
@@ -80,7 +80,7 @@ public class CloudantClientMgr {
 		}
 	}
 
-	public static Database getDB() {
+	public static Database getDB(String databaseName) {
 		if (cloudant == null) {
 			initClient();
 		}
