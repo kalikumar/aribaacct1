@@ -37,7 +37,7 @@ public class Login extends HttpServlet
 	    res.setContentType("text/html");
 	    PrintWriter pw = res.getWriter( );
 							   
-	    String str1 = req.getParameter("email");
+	    String str1 = req.getParameter("userid");
 	    String str2 = req.getParameter("password");
 		    						
 	  
