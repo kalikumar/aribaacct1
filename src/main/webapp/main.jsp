@@ -17,10 +17,53 @@
      
            
           
-  
+    <div id="wrapper">
+         
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                 
+
+
+                    <li class="active-link">
+                        <a href="Insert.jsp" ><i class="fa fa-desktop "></i>Insert New </a>
+                    </li>
+                   
+
+                    <li>
+                        <a href="Update.jsp"><i class="fa fa-table "></i>Update  </a>
+                    </li>
+                    <li>
+                        <a href="View.jsp"><i class="fa fa-edit "></i>View  </a>
+                    </li>
+
+                </ul>
+                            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-lg-12">
+              <center> <h1 align="center">CAT Account Bulletin</h1> </center>     
+                     <h2>ADMIN DASHBOARD</h2>   
+                    </div>
+                </div>              
+                 <!-- /. ROW  -->
+                  <hr />
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="alert alert-info">
+                             <strong>Welcome Kali ! </strong> You Have No pending Task For Today.
+                        </div>
+                       
+                    </div>
+                    </div>
 
 	
-        
+          
 
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
@@ -31,7 +74,16 @@
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
     
-	<h1 align="center">CAT Account Bulletin</h1>
+   
+</div></div></div>
+	<div class="footer">
+      
+    
+            <div class="row">
+                 <div class="col-lg-12" >
+                </div>
+            </div>
+        </div>
 	<a href="#" style="color: #fff;">LOGOUT</a>
 	<div class="col-lg-12"></div>
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -64,41 +116,5 @@
 			</div>
 		</div>
 	</div>
-	<h1 align="center">CAT Account Bulletin</h1>
-	<form action="Login" method="post">  
-         <center>
-         <table>
-         <TR>
-	     <TH width="50%">User Name</TH>
-		 <TD width="50%"><INPUT TYPE="text" NAME="userid"></TD>
-	  </tr>
-	  <TR>
-	  
-      <TR>
-	     <TH width="50%">Password</TH>
-		 <TD width="50%"><INPUT TYPE="password" NAME="password"></TD>
-	  </tr>
-	  <TR>
-         </table>
-         
-          <input type="submit" value="Submit" name="Submit"/><br/><br/>
-
-      </center>
-      
-          </form> 
-    
 </body>
-<div class="footer">
-      
-    
-            <div class="row">
-                 <div class="col-lg-12" >
-                </div>
-            </div>
-        </div>  
-          <center>
-        <a id="account-chooser-link" href="Register.jsp">
-        New User ? Register 
-  </a>
-  </center>
 </html>

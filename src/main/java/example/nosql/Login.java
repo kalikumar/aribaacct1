@@ -67,7 +67,7 @@ public class Login extends HttpServlet
 					  if(str1.equalsIgnoreCase(email1) && str2.equals(pass1))
 					    {
 					     // pw.println("<h3>Thankyou, you are VALID</h3>");
-					      res.sendRedirect("kkr.jsp");
+					      res.sendRedirect("main.jsp");
 					      break;
 					    } 
 					    else
