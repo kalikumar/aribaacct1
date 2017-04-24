@@ -44,4 +44,13 @@
       <servlet-name>View</servlet-name>
       <url-pattern>/View</url-pattern>
   </servlet-mapping>
+   <servlet>
+      <servlet-name>Insert</servlet-name>
+      <servlet-class>example.nosql.Insert</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>Insert</servlet-name>
+      <url-pattern>/Insert</url-pattern>
+  </servlet-mapping>
 </web-app>
