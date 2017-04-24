@@ -57,7 +57,7 @@
                 </div>              
                  <!-- /. ROW  -->
                   <hr />
-           <display:table name="sessionScope.view" pagesize="2"
+           <display:table name="sessionScope.view" pagesize="10"
 	export="true" sort="list">
 	<display:column property="projectName" title="Project Name"
 		sortable="true" headerClass="sortable" />
