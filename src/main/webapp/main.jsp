@@ -56,9 +56,14 @@
                 <div class="row">
                     <div class="col-lg-12 ">
                         <div class="alert alert-info">
-                             <strong>Welcome Kali ! </strong> You Have No pending Task For Today.
+                        <% String  s1  = (String) session.getAttribute("kkr");        %>
+
+                             <strong>Welcome <%= s1 %> !!</strong> You Have No pending Task For Today.
                         </div>
-                       
+                       <span class="logout-spn" >
+                  <a href="#" style="color:#fff;">LOGOUT</a>  
+
+                </span>
                     </div>
                     </div>
 

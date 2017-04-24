@@ -30,7 +30,7 @@ import javax.ws.rs.core.Response;
 import com.cloudant.client.api.Database;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-public class Login extends HttpServlet
+public class NameDisplay extends HttpServlet
 {  
 	public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	  {
@@ -60,18 +60,14 @@ public class Login extends HttpServlet
 	             HashMap<String, Object> obj = db.find(HashMap.class, doc.get("_id") + "");
 	             String	email1 = (String) obj.get("_id");
 	             String pass1= (String) obj.get("password");
-	             String first=(String) obj.get("firstnameid");
-	             String last=(String) obj.get("lastname");
-	             String name= first+" " +last ;	
+	             	
 					System.out.println(email1);	
 					System.out.println(pass1);	
 					
 					  if(str1.equalsIgnoreCase(email1) && str2.equals(pass1))
 					    {
 					     // pw.println("<h3>Thankyou, you are VALID</h3>");
-						  req.getSession().setAttribute("kkr", name); 
-				            req.getRequestDispatcher("main.jsp").forward(req, res);
-					      //res.sendRedirect("main.jsp");
+					      res.sendRedirect("main.jsp");
 					      break;
 					    } 
 					    else

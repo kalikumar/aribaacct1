@@ -64,10 +64,31 @@
 			</div>
 		</div>
 	</div>
-	<h1 align="center">CAT Account Bulletin</h1>
-	<form action="Login" method="post">  
+	<h1 align="center">New User Registration</h1>
+	<form action="Register" method="post">  
          <center>
          <table>
+         <TR>
+	     <TH width="50%">First Name</TH>
+		 <TD width="50%"><INPUT TYPE="text" NAME="userid1"></TD>
+	  </tr>
+	  <TR>
+	   <TR>
+	     <TH width="50%">Last Name</TH>
+		 <TD width="50%"><INPUT TYPE="text" NAME="userid2"></TD>
+	  </tr>
+	  <TR>
+	  <TR>
+	     <TH width="50%">Email Address</TH>
+		 <TD width="50%"><INPUT TYPE="text" NAME="userid3"></TD>
+	  </tr>
+	  <TR>
+	  <TR>
+	     <TH width="50%">Phone No</TH>
+		 <TD width="50%"><INPUT TYPE="text" NAME="userid4"></TD>
+	  </tr>
+	  <TR>
+	  
          <TR>
 	     <TH width="50%">User Name</TH>
 		 <TD width="50%"><INPUT TYPE="text" NAME="userid"></TD>
@@ -77,6 +98,11 @@
       <TR>
 	     <TH width="50%">Password</TH>
 		 <TD width="50%"><INPUT TYPE="password" NAME="password"></TD>
+	  </tr>
+	  <TR>
+	  <TR>
+	     <TH width="50%">Confirm Password</TH>
+		 <TD width="50%"><INPUT TYPE="password" NAME="password1"></TD>
 	  </tr>
 	  <TR>
          </table>
@@ -97,8 +123,6 @@
             </div>
         </div>  
           <center>
-        <a id="account-chooser-link" href="Register.jsp">
-        New User ? Register 
-  </a>
+
   </center>
 </html>
