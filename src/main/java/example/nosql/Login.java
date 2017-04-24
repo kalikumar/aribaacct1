@@ -68,20 +68,23 @@ public class Login extends HttpServlet
 					
 					  if(str1.equalsIgnoreCase(email1) && str2.equals(pass1))
 					    {
+						  if (str2.equals(pass1))
+						  {
 					     // pw.println("<h3>Thankyou, you are VALID</h3>");
 					
 						  req.getSession().setAttribute("kkr", name); 
 				            req.getRequestDispatcher("main.jsp").forward(req, res);
 					      //res.sendRedirect("main.jsp");
 					      break;
+						  }
+						  else
+						    {
+						      pw.println("<h3>Sorry, you are INVALID</h3>");
+						    }
+						
+						}
 					    } 
-					    else
-					    {
-					      pw.println("<h3>Sorry, you are INVALID</h3>");
-					    }
-					    pw.close( );
-					
-					}
+					    
 	 
 	  }         
   
