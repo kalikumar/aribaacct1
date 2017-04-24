@@ -72,7 +72,7 @@ public class View extends HttpServlet
 	             String endDate= (String) obj.get("enddate");
 	             String headCount= (String) obj.get("headcount");
 	             String uom= (String) obj.get("uom");
-	             String tcvValue= (String) obj.get("tcvvalue");
+	             String tcvValue= (String) obj.get("TCVvalue");
 	            // String projectName= (String) obj.get("projectname");
 	            	System.out.println(projectId);	
 					System.out.println(projectName);	
