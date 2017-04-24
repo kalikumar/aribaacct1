@@ -11,10 +11,12 @@
         <!-- CUSTOM STYLES-->
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-     <a href="logout.jsp">LogOut</a>
+
            
           
     <div id="wrapper">
@@ -35,7 +37,7 @@
                         <a href="Update.jsp"><i class="fa fa-table "></i>Update  </a>
                     </li>
                     <li>
-                        <a href="View1.jsp"><i class="fa fa-edit "></i>View  </a>
+                        <a href="View.jsp"><i class="fa fa-edit "></i>View  </a>
                     </li>
 
                 </ul>
@@ -44,28 +46,7 @@
         </nav>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
-            <div id="page-inner">
-                <div class="row">
-                    <div class="col-lg-12">
-              <center> <h1 align="center">CAT Account Bulletin</h1> </center>     
-                     <h2>ADMIN DASHBOARD</h2>   
-                    </div>
-                </div>              
-                 <!-- /. ROW  -->
-                  <hr />
-                <div class="row">
-                    <div class="col-lg-12 ">
-                        <div class="alert alert-info">
-                        <% String  s1  = (String) session.getAttribute("kkr");        %>
-
-                             <strong>Welcome <%= s1 %> !!</strong> You Have No pending Task For Today.
-                        </div>
-                       <span class="logout-spn" >
-                  <a href="#" style="color:#fff;">LOGOUT</a>  
-
-                </span>
-                    </div>
-                    </div>
+            
 
 	
           
@@ -79,8 +60,26 @@
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
     
-   
-</div></div></div>
+	<div id="page-inner">
+		<div class="row">
+			<div class="col-lg-12">
+				<center>
+					<h1 align="center">CAT Account Bulletin</h1>
+				</center>
+				<h2>ADMIN DASHBOARD</h2>
+			<form method="post" action="View"><input type="submit"
+    value="Get Report"></form>
+				
+			</div>
+			
+		</div>
+		<!-- /. ROW  -->
+		<hr>
+
+
+		
+	</div>
+	</div>
 	<div class="footer">
       
     
@@ -89,7 +88,7 @@
                 </div>
             </div>
         </div>
-	<a href="#" style="color: #fff;">LOGOUT</a>
+<!-- 	<a href="#" style="color: #fff;">LOGOUT</a>  -->
 	<div class="col-lg-12"></div>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="adjust-nav">

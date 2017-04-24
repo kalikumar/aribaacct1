@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,13 +14,14 @@
         <!-- CUSTOM STYLES-->
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
-
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="assets/css/displaytag.css" type="text/css">
+<link rel="stylesheet" href="assets/css/screen.css" type="text/css">
+<link rel="stylesheet" href="assets/css/site.css" type="text/css">
+<title>Report</title>
 </head>
 <body>
-     <a href="logout.jsp">LogOut</a>
-           
-          
-    <div id="wrapper">
+  <div id="wrapper">
          
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
@@ -53,21 +57,27 @@
                 </div>              
                  <!-- /. ROW  -->
                   <hr />
-                <div class="row">
-                    <div class="col-lg-12 ">
-                        <div class="alert alert-info">
-                        <% String  s1  = (String) session.getAttribute("kkr");        %>
-
-                             <strong>Welcome <%= s1 %> !!</strong> You Have No pending Task For Today.
-                        </div>
-                       <span class="logout-spn" >
-                  <a href="#" style="color:#fff;">LOGOUT</a>  
-
-                </span>
-                    </div>
-                    </div>
-
+           <display:table name="sessionScope.view" pagesize="2"
+	export="true" sort="list">
+	<display:column property="projectName" title="Project Name"
+		sortable="true" headerClass="sortable" />
+	<display:column property="projectId" title="Project ID"
+		sortable="true" headerClass="sortable" />
+		<display:column property="uom" title="UOM"
+		sortable="true" headerClass="sortable" />
+		<display:column property="projectType" title="Project Type"
+		sortable="true" headerClass="sortable" />
+		<display:column property="contractNumber" title="Contract Number"
+		sortable="true" headerClass="sortable" />
+		<display:column property="startDate" title="Start Date"
+		sortable="true" headerClass="sortable" />
+		<display:column property="endDate" title="End Date"
+		sortable="true" headerClass="sortable" />
+		<display:column property="tcvValue" title="TCVValue"
+		sortable="true" headerClass="sortable" />
+		
 	
+</display:table>     
           
 
      <!-- /. WRAPPER  -->
@@ -121,5 +131,7 @@
 			</div>
 		</div>
 	</div>
+
+
 </body>
 </html>

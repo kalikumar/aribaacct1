@@ -35,7 +35,7 @@
                         <a href="Update.jsp"><i class="fa fa-table "></i>Update  </a>
                     </li>
                     <li>
-                        <a href="View1.jsp"><i class="fa fa-edit "></i>View  </a>
+                        <a href="View.jsp"><i class="fa fa-edit "></i>View  </a>
                     </li>
 
                 </ul>
@@ -58,13 +58,18 @@
                         <div class="alert alert-info">
                         <% String  s1  = (String) session.getAttribute("kkr");        %>
 
-                             <strong>Welcome <%= s1 %> !!</strong> You Have No pending Task For Today.
+                             <strong>Project <%= s1 %> !!</strong> Inserted Successfully.
                         </div>
                        <span class="logout-spn" >
                   <a href="#" style="color:#fff;">LOGOUT</a>  
 
                 </span>
                     </div>
+                    <div class="container">
+							<td width="50%"><button type="button"
+									class="btn btn-info btn-lg" value="submit" href="Insert.jsp" > Insert New Project</button>
+
+						</div>
                     </div>
 
 	
@@ -79,6 +84,7 @@
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
     
+   
    
 </div></div></div>
 	<div class="footer">

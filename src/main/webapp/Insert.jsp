@@ -60,10 +60,6 @@
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
     
-   
-</div>
-	<input TYPE="text" NAME="contractnumber">
-	</div>
 	<div id="page-inner">
 		<div class="row">
 			<div class="col-lg-12">
@@ -71,22 +67,16 @@
 					<h1 align="center">CAT Account Bulletin</h1>
 				</center>
 				<h2>ADMIN DASHBOARD</h2>
-			</div>
-		</div>
-		<!-- /. ROW  -->
-		<hr>
+				<center>
+				<h3>Project Details</h3>
 
-
-		<form action="Insert" method="post">
-			<center>
-				<h2>Project Details</h2>
-
-				<form action="Testpage1.jsp" method="get">
+				<form action="Insert" method="post">
+				
 					<div class="table-responsive">
 						<table class="table">
 							<thead>
 								<tr>
-									<th width="50%">ProjectName</th>
+									<th width="100%">ProjectName</th>
 
 									<td><select name="projectname" id="projectname"
 										style="width: 160px">
@@ -155,10 +145,17 @@
 
 					</div>
 				</form>
+				
+				</center>
+				
+			</div>
+				<
+		</div>
+		<!-- /. ROW  -->
+		<hr>
 
 
-			</center>
-		</form>
+		
 	</div>
 	</div>
 	<div class="footer">

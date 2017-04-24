@@ -23,11 +23,10 @@ public class CloudantClientMgr {
 	private static String password = "eee3a79b2ac94b4d3cdf299a8f975cf923620a6618cd0891e8ac9061408cfd85";
 
 	private static void initClient() {
+	
 		if (cloudant == null) {
 			synchronized (CloudantClientMgr.class) {
-				if (cloudant != null) {
-					return;
-				}
+			
 				cloudant = createClient();
 
 			}
@@ -37,7 +36,7 @@ public class CloudantClientMgr {
 	private static CloudantClient createClient() {
 		String VCAP_SERVICES = System.getenv("VCAP_SERVICES");
 		String serviceName = null;
-
+		 db = null;
 		if (VCAP_SERVICES != null) {
 			// When running in Bluemix, the VCAP_SERVICES env var will have the credentials for all bound/connected services
 			// Parse the VCAP JSON structure looking for cloudant.
@@ -81,12 +80,14 @@ public class CloudantClientMgr {
 	}
 
 	public static Database getDB(String databaseName) {
+		cloudant =null;
 		if (cloudant == null) {
 			initClient();
 		}
-
+		 db = null;
 		if (db == null) {
 			try {
+				System.out.println(databaseName);
 				db = cloudant.database(databaseName, true);
 			} catch (Exception e) {
 				throw new RuntimeException("DB Not found", e);

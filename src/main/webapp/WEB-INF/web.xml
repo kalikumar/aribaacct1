@@ -35,4 +35,13 @@
       <servlet-name>Register</servlet-name>
       <url-pattern>/Register</url-pattern>
   </servlet-mapping>
+  <servlet>
+      <servlet-name>View</servlet-name>
+      <servlet-class>example.nosql.View</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>View</servlet-name>
+      <url-pattern>/View</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -28,5 +28,6 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/Downloads/displaytag-1.2.jar/displaytag-1.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
