@@ -11,10 +11,12 @@
         <!-- CUSTOM STYLES-->
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-     <a href="logout.jsp">LogOut</a>
+
            
           
     <div id="wrapper">
@@ -44,28 +46,7 @@
         </nav>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
-            <div id="page-inner">
-                <div class="row">
-                    <div class="col-lg-12">
-              <center> <h1 align="center">CAT Account Bulletin</h1> </center>     
-                     <h2>ADMIN DASHBOARD</h2>   
-                    </div>
-                </div>              
-                 <!-- /. ROW  -->
-                  <hr />
-                <div class="row">
-                    <div class="col-lg-12 ">
-                        <div class="alert alert-info">
-                        <% String  s1  = (String) session.getAttribute("kkr");        %>
-
-                             <strong>Welcome <%= s1 %> !!</strong> You Have No pending Task For Today.
-                        </div>
-                       <span class="logout-spn" >
-                  <a href="#" style="color:#fff;">LOGOUT</a>  
-
-                </span>
-                    </div>
-                    </div>
+            
 
 	
           
@@ -80,7 +61,106 @@
     <script src="assets/js/custom.js"></script>
     
    
-</div></div></div>
+</div>
+	<input TYPE="text" NAME="contractnumber">
+	</div>
+	<div id="page-inner">
+		<div class="row">
+			<div class="col-lg-12">
+				<center>
+					<h1 align="center">CAT Account Bulletin</h1>
+				</center>
+				<h2>ADMIN DASHBOARD</h2>
+			</div>
+		</div>
+		<!-- /. ROW  -->
+		<hr>
+
+
+		<form action="Insert" method="post">
+			<center>
+				<h2>Project Details</h2>
+
+				<form action="Testpage1.jsp" method="get">
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th width="50%">ProjectName</th>
+
+									<td><select name="projectname" id="projectname"
+										style="width: 160px">
+											<option value="Ariba AMS">Ariba AMS</option>
+											<option value="OMP">OMP</option>
+											<option value="AOD">AOD</option>
+											<option value="Mainframe">Mainframe</option>
+											<option value="other">other</option>
+									</select></td>
+								</tr>
+								<tr>
+									<th width="50%">Project ID</th>
+									<td width="50%"><input TYPE="text" NAME="projectid"></td>
+								</tr>
+								<tr>
+								</tr>
+								<tr>
+									<th width="50%">Project Type</th>
+									<td width="50%"><input TYPE="text" NAME="projecttype"></td>
+								</tr>
+								<tr>
+									<th width="50%">Contract Number</th>
+									<td width="50%"><input TYPE="text" NAME="contractnumber"></td>
+								</tr>
+								<tr>
+								</tr>
+								<tr>
+									<th width="50%">Start Date</th>
+									<td width="50%"><input TYPE="text" NAME="startdate"></td>
+								</tr>
+								<tr>
+								</tr>
+								<tr>
+									<th width="50%">End Date</th>
+									<td width="50%"><input TYPE="text" NAME="enddate"></td>
+								</tr>
+								<tr>
+								</tr>
+								<tr>
+									<th width="50%">Head Count</th>
+									<td width="50%"><input TYPE="text" NAME="headcount"></td>
+								</tr>
+								<tr>
+								</tr>
+								<tr>
+									<th width="50%">UOM</th>
+									<td width="50%"><input TYPE="text" NAME="uom"></td>
+								</tr>
+								<tr>
+								</tr>
+								<tr>
+									<th width="50%">TCV Value</th>
+									<td width="50%"><input TYPE="text" NAME="TCVvalue"></td>
+								</tr>
+								<tr>
+								</tr>
+							</thead>
+						</table>
+						<div class="container">
+							<td width="50%"><button type="submit"
+									class="btn btn-info btn-lg" value="submit">Submit</button></td>
+
+
+						</div>
+
+
+					</div>
+				</form>
+
+
+			</center>
+		</form>
+	</div>
+	</div>
 	<div class="footer">
       
     
@@ -89,7 +169,7 @@
                 </div>
             </div>
         </div>
-	<a href="#" style="color: #fff;">LOGOUT</a>
+<!-- 	<a href="#" style="color: #fff;">LOGOUT</a>  -->
 	<div class="col-lg-12"></div>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="adjust-nav">
