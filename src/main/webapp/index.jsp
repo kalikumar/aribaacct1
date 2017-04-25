@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Account Details</title>
+    <title>Industrial Account Details</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -31,7 +31,7 @@
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
     
-	<h1 align="center">CAT Account Bulletin</h1>
+	<h1 align="center">Industrial Account Details</h1>
 	<a href="#" style="color: #fff;">LOGOUT</a>
 	<div class="col-lg-12"></div>
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -64,7 +64,7 @@
 			</div>
 		</div>
 	</div>
-	<h1 align="center">CAT Account Bulletin</h1>
+	<h1 align="center">Industrial Account Bulletin</h1>
 	<form action="Login" method="post">  
          <center>
          <table>
@@ -85,8 +85,13 @@
 
       </center>
       
-          </form> 
-    
+          </form>
+	<center>
+		<a id="account-chooser-link" href="Register.jsp"> New User ?
+			Register </a> 
+			<a id="account-chooser-link" href="ForgetPassword.jsp">ForgetPassword  </a>
+	</center>
+
 </body>
 <div class="footer">
       
@@ -96,9 +101,5 @@
                 </div>
             </div>
         </div>  
-          <center>
-        <a id="account-chooser-link" href="Register.jsp">
-        New User ? Register 
-  </a>
-  </center>
+          
 </html>

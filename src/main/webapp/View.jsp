@@ -132,6 +132,10 @@
 						 </form>
 			<display:table name="sessionScope.view" pagesize="10"
 	export="true" sort="list">
+	<display:column property="industry" title="Industry"
+		sortable="true" headerClass="sortable" />
+		<display:column property="pal" title="PAL"
+		sortable="true" headerClass="sortable" />
 	<display:column property="projectName" title="Project Name"
 		sortable="true" headerClass="sortable" />
 	<display:column property="projectId" title="Project ID"

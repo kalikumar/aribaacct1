@@ -63,6 +63,8 @@ public class Insert extends HttpServlet
 				data.put("headcount", str7);
 				data.put("uom", str8);
 				data.put("TCVvalue", str9);
+				data.put("Industry", "AA&D");
+				data.put("Pal", "Vinayak J Oak/India/IBM");
 				data.put("creation_date", new Date().toString());
 				db.save(data);
 				req.getSession().setAttribute("kkr", str1); 

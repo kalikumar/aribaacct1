@@ -12,11 +12,12 @@ public class ViewPage   {
     private String headCount;
     private String uom;
     private String tcvValue;
-   
+    private String  industry;
+    private String pal;
     
 
     
-    public ViewPage(String projectId,String projectName,String projectType,String contractNumber,String startDate,String endDate,String headCount,String uom,String tcvValue) 
+    public ViewPage(String industry,String pal,String projectId,String projectName,String projectType,String contractNumber,String startDate,String endDate,String headCount,String uom,String tcvValue ) 
     {
         this.projectName = projectName;
         this.projectId = projectId;
@@ -27,6 +28,8 @@ public class ViewPage   {
         this.headCount = headCount;
         this.uom = uom;
         this.tcvValue = tcvValue;
+        this.industry=  industry ;
+        this.pal = pal;
     }
  
     public String getProjectName() {
@@ -101,5 +104,20 @@ public String getProjectType() {
 	public void setTcvValue(String tcvValue) {
 		this.tcvValue = tcvValue;
 	}
-  
+	public String getIndustry() {
+		return industry;
+	}
+
+	public void setIndustry(String industry) {
+		this.industry = industry;
+	}
+	public String getPal() {
+		return  pal;
+	}
+
+	public void setPal(String tcvValue) {
+		this.pal = pal;
+	}
+	
+	
 }

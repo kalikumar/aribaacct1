@@ -71,11 +71,13 @@ public class View extends HttpServlet
 	             String headCount= (String) obj.get("headcount");
 	             String uom= (String) obj.get("uom");
 	             String tcvValue= (String) obj.get("TCVvalue");
+	             String pal= (String) obj.get("Pal");
+	             String industry= (String) obj.get("Industry");
 	            // String projectName= (String) obj.get("projectname");
-	            	System.out.println(projectId);	
-					System.out.println(projectName);	
+	            	System.out.println(pal);	
+					System.out.println(industry);	
 					
-					list.add(new ViewPage(projectId,projectName,projectType,contractNumber,startDate,endDate,headCount,uom,tcvValue));
+					list.add(new ViewPage(industry,pal,projectId,projectName,projectType,contractNumber,startDate,endDate,headCount,uom,tcvValue));
 					 System.out.println(list);     
 					}
 	            
