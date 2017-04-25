@@ -6,7 +6,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>View Details</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -57,7 +57,80 @@
                 </div>              
                  <!-- /. ROW  -->
                   <hr />
-           <display:table name="sessionScope.view" pagesize="10"
+                  		<form action="View" method="post">
+<div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">
+    
+   <tr>
+									<th width="75%">ProjectName</th>
+
+									<td><select name="projectname" id="projectname"
+										style="width: 100px">
+											<option value="Ariba AMS">Ariba AMS</option>
+											<option value="OMP">OMP</option>
+											<option value="AOD">AOD</option>
+											<option value="Mainframe">Mainframe</option>
+											<option value="other">other</option>
+									</select></td>
+								</tr></div>
+     <div class="col-sm-4" style="background-color:lavenderblush;"><tr>
+									<th width="50%">ProjectType</th>
+									<td width="50%"><input TYPE="text" NAME="projecttype"></td>
+	
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavender;"><tr>
+									<th width="50%">Project ID</th>
+									<td width="50%"><input TYPE="text" NAME="projectid"></td>
+	
+								</tr></div>
+								</div>
+								<div class="row">
+    <div class="col-sm-4" style="background-color:lavenderblush;">
+    
+   <tr>
+									<th width="20%">C.Number</th>
+									<td width="50%"><input TYPE="text" NAME="contractnumber"></td>
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavender;"><tr>
+									<th width="50%">Start Date</th>
+									<td width="50%"><input TYPE="text" NAME="startdate"></td>
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavenderblush;"><tr>
+									<th width="50%">End Date</th>
+									<td width="50%"><input TYPE="text" NAME="enddate"></td>
+	
+								</tr></div> </div>
+								<div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">
+    
+   <tr>
+								<th width="50%">Head Count</th>
+									<td width="50%"><input TYPE="text" NAME="headcount"></td>
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavenderblush;"><tr>
+									<th width="50%">UOM</th>
+									<td width="50%"><input TYPE="text" NAME="uom"></td>
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavender;"><tr>
+									<th width="50%">TCV Value</th>
+									<td width="50%"><input TYPE="text" NAME="TCVvalue"></td>
+	
+								</tr></div>
+								</div>
+								<div class="container">
+							<td width="50%">
+<center>							
+							
+							<button type="submit" 
+									class="btn btn-info btn-lg" value="submit">Submit</button>
+									
+									
+						</center>			</td>
+
+
+						</div>
+						 </form>
+			<display:table name="sessionScope.view" pagesize="10"
 	export="true" sort="list">
 	<display:column property="projectName" title="Project Name"
 		sortable="true" headerClass="sortable" />
@@ -77,7 +150,13 @@
 		sortable="true" headerClass="sortable" />
 		
 	
-</display:table>     
+</display:table>			
+  </div>
+ 
+        
+</div>
+
+          
           
 
      <!-- /. WRAPPER  -->

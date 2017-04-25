@@ -67,16 +67,89 @@
 					<h1 align="center">CAT Account Bulletin</h1>
 				</center>
 				<h2>ADMIN DASHBOARD</h2>
-			<form method="post" action="View"><input type="submit"
-    value="Get Report"></form>
+			
 				
 			</div>
 			
 		</div>
 		<!-- /. ROW  -->
 		<hr>
+		<form action="View" method="post">
+<div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">
+    
+   <tr>
+									<th width="75%">ProjectName</th>
+
+									<td><select name="projectname" id="projectname"
+										style="width: 100px">
+											<option value="Ariba AMS">Ariba AMS</option>
+											<option value="OMP">OMP</option>
+											<option value="AOD">AOD</option>
+											<option value="Mainframe">Mainframe</option>
+											<option value="other">other</option>
+									</select></td>
+								</tr></div>
+     <div class="col-sm-4" style="background-color:lavenderblush;"><tr>
+									<th width="50%">ProjectType</th>
+									<td width="50%"><input TYPE="text" NAME="projecttype"></td>
+	
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavender;"><tr>
+									<th width="50%">Project ID</th>
+									<td width="50%"><input TYPE="text" NAME="projectid"></td>
+	
+								</tr></div>
+								</div>
+								<div class="row">
+    <div class="col-sm-4" style="background-color:lavenderblush;">
+    
+   <tr>
+									<th width="20%">C.Number</th>
+									<td width="50%"><input TYPE="text" NAME="contractnumber"></td>
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavender;"><tr>
+									<th width="50%">Start Date</th>
+									<td width="50%"><input TYPE="text" NAME="startdate"></td>
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavenderblush;"><tr>
+									<th width="50%">End Date</th>
+									<td width="50%"><input TYPE="text" NAME="enddate"></td>
+	
+								</tr></div> </div>
+								<div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">
+    
+   <tr>
+								<th width="50%">Head Count</th>
+									<td width="50%"><input TYPE="text" NAME="headcount"></td>
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavenderblush;"><tr>
+									<th width="50%">UOM</th>
+									<td width="50%"><input TYPE="text" NAME="uom"></td>
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavender;"><tr>
+									<th width="50%">TCV Value</th>
+									<td width="50%"><input TYPE="text" NAME="TCVvalue"></td>
+	
+								</tr></div>
+								</div>
+								<div class="container">
+							<td width="50%">
+<center>							
+							
+							<button type="submit" 
+									class="btn btn-info btn-lg" value="submit">Submit</button>
+									
+									
+						</center>			</td>
 
 
+						</div>
+  </div>
+  
+</div>
+</form>
 		
 	</div>
 	</div>

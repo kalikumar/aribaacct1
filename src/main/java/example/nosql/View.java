@@ -41,13 +41,11 @@ public class View extends HttpServlet
 	  {
 	    res.setContentType("text/html");
 	    PrintWriter pw = res.getWriter( );
-							   
-	    
+							   	    
 	    List list = new ArrayList();
-       // HttpSession httpSession = req.getSession();
+       HttpSession httpSession = req.getSession();
  					
-	  
-	  
+	 
 
 
 	Database db = null;
@@ -82,29 +80,29 @@ public class View extends HttpServlet
 					}
 	            
 	             
-	             List list1 = new ArrayList();
-	     		HttpSession httpSession = req.getSession();
+	             //List list1 = new ArrayList();
+	     		//HttpSession httpSession = req.getSession();
 
 	     		/*
 	     		 * Hard-coded sample data. Normally this would come from a real data
 	     		 * source such as a database
 	     		 */
+	             //req.getRequestDispatcher("test1.jsp").forward(req, res);
 	     		httpSession.setAttribute("view", list);
-	     		RequestDispatcher dispatcher = req
-	     				.getRequestDispatcher("View.jsp");
+	     		RequestDispatcher dispatcher = req.getRequestDispatcher("View.jsp");
 	     		// RequestDispatcher dispatcher = request
 	     		// .getRequestDispatcher("reportWithoutPagination.jsp");
 	     		// RequestDispatcher dispatcher = request
 	     		// .getRequestDispatcher("simpleReport.jsp");
 	     		dispatcher.forward(req, res);
 	             
-	             req.getSession().setAttribute("Viewpage", list);
-	             req.getRequestDispatcher("View.jsp").forward(req, res);
+	           //req.getSession().setAttribute("view", list);
+	             //req.getRequestDispatcher("View.jsp").forward(req, res);
 	             // RequestDispatcher dispatcher = request
 	             // .getRequestDispatcher("reportWithoutPagination.jsp");
 	             // RequestDispatcher dispatcher = request
 	             // .getRequestDispatcher("simpleReport.jsp");
-	            // dispatcher.forward(req, res);
+	          //  dispatcher.forward(req, res);
 	 
 	  }         
   
