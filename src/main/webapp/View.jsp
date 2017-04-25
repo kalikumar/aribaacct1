@@ -136,21 +136,21 @@
 		sortable="true" headerClass="sortable" />
 		<display:column property="pal" title="PAL"
 		sortable="true" headerClass="sortable" />
-	<display:column property="projectName" title="Project Name"
-		sortable="true" headerClass="sortable" />
 	<display:column property="projectId" title="Project ID"
 		sortable="true" headerClass="sortable" />
-		<display:column property="uom" title="UOM"
+	<display:column property="client" title="Client"
+		sortable="true" headerClass="sortable" />
+		<display:column property="projectName" title="Project Name"
 		sortable="true" headerClass="sortable" />
 		<display:column property="projectType" title="Project Type"
-		sortable="true" headerClass="sortable" />
-		<display:column property="contractNumber" title="Contract Number"
 		sortable="true" headerClass="sortable" />
 		<display:column property="startDate" title="Start Date"
 		sortable="true" headerClass="sortable" />
 		<display:column property="endDate" title="End Date"
 		sortable="true" headerClass="sortable" />
 		<display:column property="tcvValue" title="TCVValue"
+		sortable="true" headerClass="sortable" />
+		<display:column property="headCount" title="Head Count"
 		sortable="true" headerClass="sortable" />
 		
 	

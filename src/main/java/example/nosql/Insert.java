@@ -37,15 +37,16 @@ public class Insert extends HttpServlet
 	    res.setContentType("text/html");
 	    //PrintWriter pw = res.getWriter( );
 							   
-	    String str1 = req.getParameter("projectname");
-	    String str2 = req.getParameter("projectid");
-	    String str3 = req.getParameter("projecttype");
-	    String str4 = req.getParameter("contractnumber");
-	    String str5 = req.getParameter("startdate");
-	    String str6 = req.getParameter("enddate");
-	    String str7 = req.getParameter("headcount");	  
-	    String str8 = req.getParameter("uom");	
-	    String str9 = req.getParameter("TCVvalue");	
+	    String str1 = req.getParameter("industry");
+	    String str2 = req.getParameter("pal");
+	    String str3 = req.getParameter("projectid");
+	    String str4 = req.getParameter("client");
+	    String str5 = req.getParameter("projectname");
+	    String str6 = req.getParameter("projecttype");
+	    String str7 = req.getParameter("startdate");	  
+	    String str8 = req.getParameter("enddate");	
+	    String str9 = req.getParameter("TCVvalue");
+	    String str10 = req.getParameter("headcount");
 
 	Database db = null;
 
@@ -54,20 +55,21 @@ public class Insert extends HttpServlet
 				System.out.println(db);
 				Map<String, Object> data = new HashMap<String, Object>();
 			
-				data.put("_id", str2);
-				data.put("projectname", str1);
-				data.put("projecttype", str3);
-				data.put("contractnumber", str4);
-				data.put("startdate", str5);
-				data.put("enddate", str6);
-				data.put("headcount", str7);
-				data.put("uom", str8);
+				
+				data.put("industry", str1);
+				data.put("pal", str2);
+				data.put("projectid", str3);
+				data.put("client", str4);
+				data.put("projectname", str5);
+				data.put("projecttype", str6);
+				data.put("startdate", str7);
+				data.put("enddate", str8);
 				data.put("TCVvalue", str9);
-				data.put("Industry", "AA&D");
-				data.put("Pal", "Vinayak J Oak/India/IBM");
+				data.put("headcount", str10);
+				
 				data.put("creation_date", new Date().toString());
 				db.save(data);
-				req.getSession().setAttribute("kkr", str1); 
+				req.getSession().setAttribute("kkr", str5); 
 	            req.getRequestDispatcher("InsertSuccessful.jsp").forward(req, res);
 				
 				  }         

@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>View Details</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -11,14 +14,16 @@
         <!-- CUSTOM STYLES-->
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="assets/css/displaytag.css" type="text/css">
+<link rel="stylesheet" href="assets/css/screen.css" type="text/css">
+<link rel="stylesheet" href="assets/css/site.css" type="text/css">
+<title>Report</title>
+<script type="text/javascript">
  //<![CDATA[ 
  // array of possible countries in the same order as they appear in the country selection list 
  var industryLists = new Array(4) 
- industryLists["empty"] = ["Select a PAL"]; 
+ industryLists["empty"] = ["Select a Country"]; 
  industryLists["AA&D"] = ["Vinayak J Oak/India/IBM"]; 
  industryLists["C&P"] = ["Sandeep Debray/India/IBM"]; 
  industryLists["ELE"] = ["Milind M Kulkarni/India/IBM"]; 
@@ -115,13 +120,10 @@
  } 
 //]]>
 </script>
-  
+
 </head>
 <body>
-
-           
-          
-    <div id="wrapper">
+  <div id="wrapper">
          
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
@@ -139,7 +141,7 @@
                         <a href="Update.jsp"><i class="fa fa-table "></i>Update  </a>
                     </li>
                     <li>
-                        <a href="View.jsp"><i class="fa fa-edit "></i>View  </a>
+                        <a href="View1.jsp"><i class="fa fa-edit "></i>View  </a>
                     </li>
 
                 </ul>
@@ -148,59 +150,49 @@
         </nav>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
-            
-
-	
-          
-
-     <!-- /. WRAPPER  -->
-    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-      <!-- BOOTSTRAP SCRIPTS -->
-    <script src="assets/js/bootstrap.min.js"></script>
-      <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-lg-12">
+              <center> <h1 align="center">CAT Account Bulletin</h1> </center>     
+                     <h2>ADMIN DASHBOARD</h2>   
+                    </div>
+                </div>              
+                 <!-- /. ROW  -->
+                  <hr />
+                  		<form action="Insert" method="post">
+<div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">
     
-	<div id="page-inner">
-		<div class="row">
-			<div class="col-lg-12">
-				<center>
-					<h1 align="center">CAT Account Bulletin</h1>
-				</center>
-				<h2>ADMIN DASHBOARD</h2>
-				<center>
-				<h3>Project Details</h3>
+   <tr>
+									<th width="75%">Industry</th>
 
-				<form action="Insert" method="post">
-				
-					<div class="table-responsive">
-						<table class="table">
-							<thead>
-								<tr>
-									<th width="50%">Industry</th>
-
-									<td><select name ="industry" id="industry" onchange="palChange(this);">
+									<td><select id="industry" onchange="palChange(this);">
     <option value="empty">Select a Industry</option>
     <option value="AA&D">AA&D</option>
     <option value="C&P">C&P</option>
     <option value="ELE">ELE</option>
     <option value="IP">IP</option>
   </select></td>
-								</tr>
-								<tr>
+								</tr></div>
+     <div class="col-sm-4" style="background-color:lavenderblush;"><tr>
 									<th width="50%">PAL</th>
-									<td width="50%"><select name="pal" id="pal">
+									<td width="50%"><select id="pal">
     <option value="0">Select a Pal</option>
   </select></td>
-								</tr>
-								<tr>
+	
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavender;"><tr>
 									<th width="50%">Project DB ID</th>
 									<td width="50%"><input TYPE="text" NAME="projectid"></td>
-								</tr>
-								<tr>
-									<th width="50%">Client Name</th>
-									<td width="50%"><select name="client" id="client" onchange="clientChange(this);">
+	
+								</tr></div>
+								</div>
+								<div class="row">
+    <div class="col-sm-4" style="background-color:lavenderblush;">
+    
+   <tr>
+									<th width="20%">Client Name</th>
+									<td width="50%"><select id="industry" onchange="clientChange(this);">
     <option value="empty">Select a Client</option>
     <option value="Caterpillar">Caterpillar</option>
     <option value="ALSTOM">ALSTOM</option>
@@ -223,58 +215,70 @@
     
     
   </select></td>
-								</tr>
-								<tr>
-									<th width="50%">Project Name</th>
-									<td width="50%"><select name="projectname" id="projectname">
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavender;"><tr>
+									<th width="50%">ProjectName</th>
+									<td width="50%"><select id="projectname">
     <option value="0">Select a ProjectName</option>
   </select></td>
-								</tr>
-								<tr>
-									<th width="50%">Project Type</th>
-									<td width="50%"><input TYPE="text" NAME="projecttype"></td>
-								</tr>
-								<tr>
-									<th width="50%">Start Date</th>
-									<td width="50%"><input TYPE="text" NAME="startdate"></td>
-								</tr>
-								<tr>
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavenderblush;"><tr>
 									<th width="50%">End Date</th>
 									<td width="50%"><input TYPE="text" NAME="enddate"></td>
+	
+								</tr></div> </div>
+								<div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">
+    
+   <tr>
+								<th width="50%">Head Count</th>
+									<td width="50%"><input TYPE="text" NAME="headcount"></td>
+								</tr></div>
+    <div class="col-sm-4" style="background-color:lavenderblush;"><tr>
+									<th width="50%">UOM</th>
+									<td width="50%"></td>
 								</tr>
-								<tr>
+							<input TYPE="text" NAME="uom">
+						</div>
+    <div class="col-sm-4" style="background-color:lavender;"><tr>
 									<th width="50%">TCV Value</th>
 									<td width="50%"><input TYPE="text" NAME="TCVvalue"></td>
-								</tr>
-								<tr>
-									<th width="50%">Head Count</th>
-									<td width="50%"><input TYPE="text" NAME="headcount"></td>
-								</tr>
-							</thead>
-						</table>
-						<div class="container">
-							<td width="50%"><button type="submit"
-									class="btn btn-info btn-lg" value="submit">Submit</button></td>
+	
+								</tr></div>
+								</div>
+								<div class="container">
+							<td width="50%">
+<center>							
+							
+							<button type="submit" 
+									class="btn btn-info btn-lg" value="submit">Submit</button>
+									
+									
+						</center>			</td>
 
 
 						</div>
+						 </form>
 
+  </div>
+ 
+        
+</div>
 
-					</div>
-				</form>
-				
-				</center>
-				
-			</div>
-				<
-		</div>
-		<!-- /. ROW  -->
-		<hr>
+          
+          
 
-
-		
-	</div>
-	</div>
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+    
+   
+</div></div></div>
 	<div class="footer">
       
     
@@ -283,7 +287,7 @@
                 </div>
             </div>
         </div>
-<!-- 	<a href="#" style="color: #fff;">LOGOUT</a>  -->
+	<a href="#" style="color: #fff;">LOGOUT</a>
 	<div class="col-lg-12"></div>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="adjust-nav">
@@ -315,5 +319,7 @@
 			</div>
 		</div>
 	</div>
+
+
 </body>
 </html>

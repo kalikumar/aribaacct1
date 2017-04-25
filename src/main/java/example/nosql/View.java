@@ -62,22 +62,23 @@ public class View extends HttpServlet
 	         System.out.println(allDocs);
 	             for (HashMap doc : allDocs) {
 	             HashMap<String, Object> obj = db.find(HashMap.class, doc.get("_id") + "");
-	             String	projectId = (String) obj.get("_id");
+	             String industry= (String) obj.get("industry");
+	             String pal= (String) obj.get("pal");
+	             String projectId= (String) obj.get("projectid");
+	             String client= (String) obj.get("client");
 	             String projectName= (String) obj.get("projectname");
 	             String projectType= (String) obj.get("projecttype");
-	             String contractNumber= (String) obj.get("contractnumber");
 	             String startDate= (String) obj.get("startdate");
 	             String endDate= (String) obj.get("enddate");
-	             String headCount= (String) obj.get("headcount");
-	             String uom= (String) obj.get("uom");
 	             String tcvValue= (String) obj.get("TCVvalue");
-	             String pal= (String) obj.get("Pal");
-	             String industry= (String) obj.get("Industry");
+	             String headCount= (String) obj.get("headcount");
+	             
+	             
 	            // String projectName= (String) obj.get("projectname");
 	            	System.out.println(pal);	
 					System.out.println(industry);	
 					
-					list.add(new ViewPage(industry,pal,projectId,projectName,projectType,contractNumber,startDate,endDate,headCount,uom,tcvValue));
+					list.add(new ViewPage(industry,pal,projectId,client,projectName,projectType,startDate,endDate,tcvValue,headCount));
 					 System.out.println(list);     
 					}
 	            
