@@ -32,7 +32,7 @@
                    
 
                     <li>
-                        <a href="Update.jsp"><i class="fa fa-table "></i>Update  </a>
+                        <a href="geo.jsp"><i class="fa fa-table "></i>Update  </a>
                     </li>
                     <li>
                         <a href="View1.jsp"><i class="fa fa-edit "></i>View  </a>
