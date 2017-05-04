@@ -37,6 +37,9 @@
                     <li>
                         <a href="View1.jsp"><i class="fa fa-edit "></i>View  </a>
                     </li>
+                     <li>
+                        <a href="geo1.jsp"><i class="fa fa-edit "></i>Location</a>
+                    </li>
 
                 </ul>
                             </div>

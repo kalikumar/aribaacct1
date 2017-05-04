@@ -53,4 +53,13 @@
       <servlet-name>Insert</servlet-name>
       <url-pattern>/Insert</url-pattern>
   </servlet-mapping>
+    <servlet>
+      <servlet-name>LookUpProgram</servlet-name>
+      <servlet-class>example.nosql.LookUpProgram</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>LookUpProgram</servlet-name>
+      <url-pattern>/LookUpProgram</url-pattern>
+  </servlet-mapping>
 </web-app>
