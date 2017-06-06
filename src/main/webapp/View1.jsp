@@ -64,7 +64,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<center>
-					<h1 align="center">CAT Account Bulletin</h1>
+					<h1 align="center">Industrial Account Bulletin</h1>
 				</center>
 				<h2>ADMIN DASHBOARD</h2>
 			

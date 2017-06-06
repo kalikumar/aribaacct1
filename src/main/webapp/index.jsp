@@ -32,7 +32,6 @@
     <script src="assets/js/custom.js"></script>
     
 	<h1 align="center">Industrial Account Details</h1>
-	<a href="#" style="color: #fff;">LOGOUT</a>
 	<div class="col-lg-12"></div>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="adjust-nav">
@@ -46,7 +45,6 @@
 
 			</div>
 
-			<span class="logout-spn"> </span>
 		</div>
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="adjust-nav">
